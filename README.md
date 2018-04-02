@@ -1,18 +1,38 @@
-# Dead simple, boiler plate getting started Java app with maven
-Skeleton Java project with a vanilla maven file with minimal options to get you started.
+# Anagram Finder
 
-#### Notes ####
-This project contains a gitignore that will stop most IDE specific files as well as Java build files from being checked into source control. It's generally good practice to only contain core files that are needed for the project to run. Since Maven, Gradle, or Ant (not really anymore) control the build process and project attributes we don't need to hold on to project specific files from IDEA, NetBeans, Eclipse, etc.
+#### Build Instructions ####
 
-#### Getting started example with IDEA ####
+Maven is a prerequisite.
+* Navigate to root directory and run the following command
 
-##### Build project to a *.jar #####
-* Git clone this project to your local workstation.
-* Open IntelliJ IDEA and select the option to import an project
-* After going through the import process we will open the File menu and select Project Structure.
-* Select the Artifacts tab
-* Click the plus (+) sign and add JAR -> Empty.
-* Make sure your output directory at the top is desireable. I usually select bin/ to put the jar
-* Select "Build on Make" checkbox
-* Make sure the manifest is selected
-* Right-click your *.jar inside output layout. Select Add a Copy of -> Module Output
+```
+sudo mvn package
+
+```
+
+Note: The build is dependent on the passing of unit test cases. So be sure to have a dictionary.txt file placed in the root directory.
+
+
+* A .jar file will be compiled to the target directory
+
+* To execute the first version, run the following command from root with the dictionary file being the first argument
+
+```
+java -jar target/myapp-1.0-jar-with-dependencies.jar ./dictionary.txt
+
+```
+
+
+* To execute the second version, run the following command from root with the dictionary file being the first argument and a second argument. It just needs a second argument as an indication to run the second version.
+
+```
+java -jar target/myapp-1.0-jar-with-dependencies.jar ./dictionary.txt large
+
+```
+
+
+* To run the unit tests, excute this command:
+
+```
+sudo mvn test
+```
