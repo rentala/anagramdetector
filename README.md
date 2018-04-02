@@ -36,3 +36,7 @@ java -jar target/myapp-1.0-jar-with-dependencies.jar ./dictionary.txt large
 ```
 sudo mvn test
 ```
+
+##### Initial project and history : #####
+
+https://github.com/rentala/AnagramFinder
